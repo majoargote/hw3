@@ -26,8 +26,6 @@ def car_at_light(light):
 light_color = car_at_light(input("Enter a color: "))
 print(light_color)
 
-
-
 # 2)
 # Create a function named "safe_subtract" that
 # takes two parameters and returns the result of
@@ -36,9 +34,23 @@ print(light_color)
 # it returns None.
 # If there is any other reason why it fails show the problem 
 # 
+def safe_subtract(a, b):
+    """
+    Subtracts the second value from the first, handling type errors.
+    """
+    try:
+        return a - b                 
+    except TypeError:
+        return None
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None                  
 
-ejemplo= (1,2,3,4,5)
-ejemplo_2=(5,6,7,8)
+print(safe_subtract(250, 28))            #222
+print(safe_subtract(75, 331))            #-256
+print(safe_subtract(8, "DataScience"))   #None
+print(safe_subtract([84,5], [22]))       #None
+
 
 # 3)
 # Imagine you have a dictionary with the attributes of a person
@@ -48,8 +60,9 @@ ejemplo_2=(5,6,7,8)
 # that handles both examples.
 # Name the first function "retrieve_age_eafp" and follow EAFP
 # Name the second function "retrieve_age_lbyl" and follow lbyl
-ejemplo_respuesta= (5,6,7)
-ejemplo_respuesta=(7,8,9)
+
+
+
 
 
 # 4)
