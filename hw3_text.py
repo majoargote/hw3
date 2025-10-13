@@ -37,6 +37,9 @@ print(light_color)
 # If there is any other reason why it fails show the problem 
 # 
 
+ejemplo= (1,2,3,4,5)
+ejemplo_2=(5,6,7,8)
+
 # 3)
 # Imagine you have a dictionary with the attributes of a person
 # {'name': 'John', 'last_name': 'Doe', 'birth': 1987}
