@@ -92,7 +92,7 @@ def read_data(filename="data.csv"):
 # which logical errors did you find and correct them
 ### (a)
 #
-# total_double_sum = 0
+#total_double_sum = 0
 #for elem in [10, 5, 2]:
 #    double = elem * 2
 #    total_double_sum += elem
@@ -107,9 +107,18 @@ for elem in [10, 5, 2]:
     total_double_sum += double
 
 ### (b)
+#strings = ''
+#for string in ['I', 'am', 'Groot']:
+#    strings = string+"_"+string
+
+# Logical error: The loop is overwriting the 'strings' variable in each iteration
+# instead of concatenating the strings. This results in 'strings' only holding
+# the result of the last iteration. Also, it concatenates the same string twice.
 strings = ''
 for string in ['I', 'am', 'Groot']:
-    strings = string+"_"+string
+    # Corrected line: Concatenate the current string with a space to the existing 'strings'
+    strings += string + " "
+print(strings)
 
 ### (c) Careful!
 j=10
