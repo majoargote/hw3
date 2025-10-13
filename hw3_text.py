@@ -121,9 +121,23 @@ for string in ['I', 'am', 'Groot']:
 print(strings)
 
 ### (c) Careful!
+#j=10
+#while j > 0:
+#   j += 1
+
+# Logical error: The condition 'j > 0' and the increment 'j += 1' will cause an infinite loop
+# because j will always be greater than 0 and will keep increasing.
 j=10
+# Corrected code: Change the condition or the increment to ensure the loop terminates.
+# For example, to loop while j is greater than 0 and decrement j:
 while j > 0:
-   j += 1
+   j -= 1 # Corrected line: Decrement j instead of incrementing
+print(f"Corrected loop for (c): j ends at {j}")
+
+# Or, if the intention was to loop a specific number of times while j is positive:
+j = 10
+for i in range(j): # Loop 10 times
+    print(f"Loop iteration {i}, j is {j}")
 
 ### (d)
 productory = 0
