@@ -21,6 +21,12 @@ def car_at_light(light):
         return "wait"
     else:
         raise Exception(f"Undefined instruction for color: {light}")
+    
+
+light_color = car_at_light(input("Enter a color: "))
+print(light_color)
+
+
 
 # 2)
 # Create a function named "safe_subtract" that
