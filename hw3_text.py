@@ -91,10 +91,20 @@ def read_data(filename="data.csv"):
 # in the code blocks below. Comment in each of them
 # which logical errors did you find and correct them
 ### (a)
+#
+# total_double_sum = 0
+#for elem in [10, 5, 2]:
+#    double = elem * 2
+#    total_double_sum += elem
+#
+
+# Logical error: The variable 'total_double_sum' is accumulating the original 'elem' values
+# instead of the 'double' values.
 total_double_sum = 0
 for elem in [10, 5, 2]:
     double = elem * 2
-    total_double_sum += elem
+    # Corrected line: Add 'double' to the total
+    total_double_sum += double
 
 ### (b)
 strings = ''
