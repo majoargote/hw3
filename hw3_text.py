@@ -140,6 +140,19 @@ for i in range(j): # Loop 10 times
     print(f"Loop iteration {i}, j is {j}")
 
 ### (d)
+#productory = 0
+#for elem in [1, 5, 25]:
+#    productory *= elem
+
+# Logical error: The variable 'productory' is initialized to 0. Any multiplication
+# by 0 will result in 0, so the productory will remain 0 regardless of the elements
+# in the list.
 productory = 0
 for elem in [1, 5, 25]:
-    productory *= elem
+  productory *= elem
+print(f"Corrected productory for (d): {productory}")
+
+# Code to multiply each value in the vector by 3
+numbers = [1, 5, 25]
+result = [elem * 3 for elem in numbers]
+print(f"Result of multiplying each element by 0: {result}")
