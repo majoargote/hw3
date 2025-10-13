@@ -48,6 +48,9 @@ ejemplo_2=(5,6,7,8)
 # that handles both examples.
 # Name the first function "retrieve_age_eafp" and follow EAFP
 # Name the second function "retrieve_age_lbyl" and follow lbyl
+ejemplo_respuesta= (5,6,7)
+ejemplo_respuesta=(7,8,9)
+
 
 # 4)
 # Imagine you have a file named data.csv. 
