@@ -46,7 +46,36 @@ def car_at_light(light):
 # making sure to use to handle the fact 
 # that it might not exist. 
 #
+import pandas as pd
 
+def read_data(filename="data.csv"):
+  """
+  Reads data from a CSV file, handling FileNotFoundError.
+
+  Args:
+    filename: The name of the CSV file to read (default is "data.csv").
+
+  Returns:
+    A pandas DataFrame if the file is read successfully, otherwise None.
+  """
+  try:
+    df = pd.read_csv(filename)
+    return df
+  except FileNotFoundError:
+    print(f"Error: The file '{filename}' was not found.")
+    return None
+  except Exception as e:
+    print(f"An error occurred while reading the file: {e}")
+    return None
+
+# Example usage:
+# Assuming 'data.csv' exists in the current directory
+# data_df = read_data()
+# if data_df is not None:
+#   display(data_df.head())
+
+# Example usage with a non-existent file
+# non_existent_df = read_data("non_existent_file.csv")
 
 # 5) Squash some bugs! 
 # Find the possible logical errors (bugs) 
